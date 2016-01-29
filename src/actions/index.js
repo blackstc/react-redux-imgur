@@ -18,7 +18,7 @@ export function fetchTopics() {
 }
 
 export function fetchImages(id) {
-    const request = axios.get(`${ROOT_URL}gallery/album/${id}`, HEADERS);
+    const request = axios.get(`${ROOT_URL}topics/${id}`, HEADERS);
 
     return {
         type: FETCH_IMAGES,

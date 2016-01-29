@@ -31,7 +31,6 @@ class Topics extends Component {
 }
 
 function mapStateToProps(state) {
-    console.log(state.topics.all);
     return { topics: state.topics.all };
 }
 
