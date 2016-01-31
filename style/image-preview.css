@@ -1,10 +1,29 @@
 .image-preview {
     display: inline-block;
     position: relative;
+    text-align: center;
+    margin: 5px;
+    border: 3px solid black;
 }
 
 .image-preview img {
     height: 300px;
     width: 300px;
     display: inline-block;
+}
+.image-preview .glyphicon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 50px;
+    opacity: .7;
+    color: white;
+}
+
+.image-preview video {
+    height: 300px;
+    width: 300px;
+    vertical-align: middle;
+    background-color: black;
 }

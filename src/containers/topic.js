@@ -20,7 +20,7 @@ class Topic extends Component {
     render() {
 
         return (
-            <div>
+            <div className="text-center">
                 {this.renderList()}
             </div>
         );
