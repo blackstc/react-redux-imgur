@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { fetchImages } from '../actions/index';
+import ImagePreview from './image-preview';
 
 class Topic extends Component {
     componentWillMount() {
@@ -10,8 +11,8 @@ class Topic extends Component {
     renderList() {
         const { images } = this.props;
 
-        return images.slice(0, 20).map((image) => {
-            return <div>{image.title}</div>
+        return images.slice(0, 21).map((image) => {
+            return <ImagePreview key={image.id} {...image}/>
         });
 
     }
