@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router'
 
 class ImagePreview extends Component {
     constructor(props) {
@@ -39,13 +40,14 @@ class ImagePreview extends Component {
 
     render() {
         return (
-            <div
+            <Link
+                to={`/images/${this.props.id}`}
                 className="image-preview"
                 onMouseEnter={this.onMouseEnter.bind(this)}
                 onMouseLeave={this.onMouseLeave.bind(this)}>
                 {this.props.animated && this.state.hovering ? this.video() : this.image()}
                 {this.props.animated && !this.state.hovering ? this.icon() : null}
-            </div>
+            </Link>
         )
     }
 }

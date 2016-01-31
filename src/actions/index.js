@@ -2,6 +2,7 @@ import axios from 'axios';
 
 export const FETCH_TOPICS = 'FETCH_TOPCIS';
 export const FETCH_IMAGES = 'FETCH_IMAGES';
+export const FETCH_IMAGE = 'FETCH_IMAGE';
 
 const ROOT_URL = 'https://api.imgur.com/3/';
 const API_KEY = '0c81f59f19061f5';
@@ -22,6 +23,15 @@ export function fetchImages(id) {
 
     return {
         type: FETCH_IMAGES,
+        payload: request
+    }
+}
+
+export function fetchImage(id) {
+    const request = axios.get(`${ROOT_URL}gallery/image/${id}`, HEADERS);
+
+    return {
+        type: FETCH_IMAGE,
         payload: request
     }
 }

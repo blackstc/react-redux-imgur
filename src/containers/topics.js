@@ -13,7 +13,7 @@ class Topics extends Component {
 
         return topics.map((topic) => {
             return (
-                <Link to={`topics/${topic.id}`} className="list-group-item" key={topic.id}>
+                <Link to={`/topics/${topic.id}`} className="list-group-item" key={topic.id}>
                     <h4>{topic.name}</h4>
                     <p>{topic.description}</p>
                 </Link>
