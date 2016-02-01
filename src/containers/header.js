@@ -14,7 +14,7 @@ class Header extends Component {
         return topics.slice(0, 4).map((topic) => {
             return (
                 <li key={topic.id}>
-                    <Link activeClassName="active" to={"/topics/" + topic.id}>
+                    <Link activeClassName="active" to={`/topics/${topic.id}`}>
                         {topic.name}
                     </Link>
                 </li>
